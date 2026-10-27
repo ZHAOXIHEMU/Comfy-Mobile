@@ -3,6 +3,7 @@
 ## English
 
 > **This project is customized for the author's own ComfyUI workflows.**
+> **Its purpose is to make it convenient to run existing image-generation workflows from a phone. The app cannot add, remove, connect, or edit ComfyUI nodes. Edit the nodes and workflow structure in ComfyUI on the computer and save them there.**
 > It maps to four specific workflows: text-to-image, single-image editing, dual-image editing, and Anima text-to-image. **To use it in your own environment, ask your own Agent to review and adapt the workflow structure and node ID mappings, model settings, translation and artist nodes, and deployment paths, then build and verify it.** Arbitrary workflows are not detected automatically. Installing the APK and changing the server address alone does not guarantee compatibility.
 
 A personal Android client for generating images remotely with ComfyUI, supporting Android 13–16 with a focus on Android 16. It connects over IPv6 or a local network and supports text-to-image, single- and dual-image editing, and Anima anime generation. The interface runs locally in a WebView; networking, image files, albums, and task recovery are handled by native Java code.
@@ -36,6 +37,7 @@ Model weights, SDKs, Python runtimes, signing private keys, phone connection set
 ## 中文
 
 > **这是根据作者本人的工作流定制的项目，不是通用 ComfyUI 手机客户端。**
+> **本项目只是为了方便用手机操作已有工作流生图，手机端不具备新增、删除、连接或调整 ComfyUI 节点的能力。节点和流程结构请在电脑端 ComfyUI 中修改并保存。**
 > 当前固定对应作者的文生图、单图改图、双图改图、Anima 文生图四个工作流。**如果想用于自己的环境，请使用自己的 Agent 检查并修改工作流结构与节点 ID 映射、模型配置、翻译与画师节点以及部署路径，再自行构建和验证。** 不支持自动识别任意工作流；直接安装 APK 并更换服务器地址，不代表能运行你的工作流。
 
 面向 Android 13～16（重点适配 Android 16）的个人 ComfyUI 远程出图客户端。支持 IPv6／局域网连接、文生图、单图／双图图改图及 Anima 动漫。界面为本地 WebView，网络、图片文件、相册与任务恢复由原生 Java 实现。
