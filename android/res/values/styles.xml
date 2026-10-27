@@ -1,0 +1,7 @@
+<resources>
+ <style name="PhotoPickerTheme" parent="android:style/Theme.Material.NoActionBar">
+  <item name="android:windowBackground">#101112</item>
+  <item name="android:windowDisablePreview">true</item>
+  <item name="android:colorAccent">#c6e0b1</item>
+ </style>
+</resources>

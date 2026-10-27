@@ -1,0 +1,1439 @@
+{
+  "text": {
+    "prompt": {
+      "3": {
+        "class_type": "VAEDecode",
+        "inputs": {
+          "samples": [
+            "44",
+            0
+          ],
+          "vae": [
+            "4",
+            0
+          ]
+        },
+        "_meta": {
+          "title": "VAEDecode"
+        }
+      },
+      "4": {
+        "class_type": "VAELoader",
+        "inputs": {
+          "vae_name": "qwen_image_vae.safetensors"
+        },
+        "_meta": {
+          "title": "VAELoader"
+        }
+      },
+      "6": {
+        "class_type": "CLIPTextEncode",
+        "inputs": {
+          "clip": [
+            "66",
+            0
+          ],
+          "text": [
+            "83",
+            0
+          ]
+        },
+        "_meta": {
+          "title": "CLIPTextEncode"
+        }
+      },
+      "10": {
+        "class_type": "EmptyLatentImage",
+        "inputs": {
+          "width": 1024,
+          "height": 1024,
+          "batch_size": 1
+        },
+        "_meta": {
+          "title": "EmptyLatentImage"
+        }
+      },
+      "37": {
+        "class_type": "CLIPTextEncode",
+        "inputs": {
+          "clip": [
+            "66",
+            0
+          ],
+          "text": ""
+        },
+        "_meta": {
+          "title": "CLIPTextEncode"
+        }
+      },
+      "40": {
+        "class_type": "CFGGuider",
+        "inputs": {
+          "model": [
+            "59",
+            0
+          ],
+          "positive": [
+            "46",
+            0
+          ],
+          "negative": [
+            "37",
+            0
+          ],
+          "cfg": 1
+        },
+        "_meta": {
+          "title": "CFGGuider"
+        }
+      },
+      "41": {
+        "class_type": "RandomNoise",
+        "inputs": {
+          "noise_seed": 0
+        },
+        "_meta": {
+          "title": "RandomNoise"
+        }
+      },
+      "42": {
+        "class_type": "KSamplerSelect",
+        "inputs": {
+          "sampler_name": "euler"
+        },
+        "_meta": {
+          "title": "KSamplerSelect"
+        }
+      },
+      "43": {
+        "class_type": "BasicScheduler",
+        "inputs": {
+          "model": [
+            "71",
+            0
+          ],
+          "scheduler": "simple",
+          "steps": 8,
+          "denoise": 1
+        },
+        "_meta": {
+          "title": "BasicScheduler"
+        }
+      },
+      "44": {
+        "class_type": "SamplerCustomAdvanced",
+        "inputs": {
+          "noise": [
+            "41",
+            0
+          ],
+          "guider": [
+            "40",
+            0
+          ],
+          "sampler": [
+            "42",
+            0
+          ],
+          "sigmas": [
+            "43",
+            0
+          ],
+          "latent_image": [
+            "10",
+            0
+          ]
+        },
+        "_meta": {
+          "title": "SamplerCustomAdvanced"
+        }
+      },
+      "46": {
+        "class_type": "ConditioningKrea2Rebalance",
+        "inputs": {
+          "conditioning": [
+            "6",
+            0
+          ],
+          "preset": "balanced",
+          "per_layer_weights": "1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.5,5.0,1.1,4.0,1.0",
+          "multiplier": 1,
+          "renormalize": true
+        },
+        "_meta": {
+          "title": "Conditioning Krea2 Rebalance"
+        }
+      },
+      "50": {
+        "class_type": "SaveImage",
+        "inputs": {
+          "images": [
+            "3",
+            0
+          ],
+          "filename_prefix": "ComfyMobile/text"
+        },
+        "_meta": {
+          "title": "SaveImage"
+        }
+      },
+      "59": {
+        "class_type": "Lora Loader Stack (rgthree)",
+        "inputs": {
+          "model": [
+            "70",
+            0
+          ],
+          "clip": [
+            "66",
+            0
+          ],
+          "lora_01": "None",
+          "strength_01": 1,
+          "lora_02": "None",
+          "strength_02": 1,
+          "lora_03": "None",
+          "strength_03": 1,
+          "lora_04": "None",
+          "strength_04": 1
+        },
+        "_meta": {
+          "title": "Lora Loader Stack (rgthree)"
+        }
+      },
+      "66": {
+        "class_type": "CLIPLoader",
+        "inputs": {
+          "clip_name": "qwen3-vl-4b-heretic_fp8_e4m3fn.safetensors",
+          "type": "krea2",
+          "device": "default"
+        },
+        "_meta": {
+          "title": "CLIPLoader"
+        }
+      },
+      "70": {
+        "class_type": "Lora Loader Stack (rgthree)",
+        "inputs": {
+          "model": [
+            "71",
+            0
+          ],
+          "clip": [
+            "66",
+            0
+          ],
+          "lora_01": "None",
+          "strength_01": 1,
+          "lora_02": "None",
+          "strength_02": 1,
+          "lora_03": "None",
+          "strength_03": 0.7,
+          "lora_04": "None",
+          "strength_04": 1
+        },
+        "_meta": {
+          "title": "Lora Loader Stack (rgthree)"
+        }
+      },
+      "71": {
+        "class_type": "UNETLoader",
+        "inputs": {
+          "unet_name": "krea_kroma_v0.3.1_turbo_opd_w6a8.safetensors",
+          "weight_dtype": "default"
+        },
+        "_meta": {
+          "title": "UNETLoader"
+        }
+      },
+      "78": {
+        "class_type": "LlamaCPPModelLoader",
+        "inputs": {
+          "model_name": "Qwen2.5-3B-Instruct-Q4_K_M.gguf",
+          "chat_format": "chatml",
+          "mmproj_model_name": "None"
+        },
+        "_meta": {
+          "title": "① Qwen2.5 GGUF · 本地已有模型"
+        }
+      },
+      "79": {
+        "class_type": "LlamaCPPOptions",
+        "inputs": {
+          "n_gpu_layers": 0,
+          "n_ctx": 4096,
+          "n_threads": 8,
+          "n_threads_batch": 8,
+          "n_batch": 512,
+          "n_ubatch": 512,
+          "main_gpu": 0,
+          "offload_kqv": false,
+          "numa": false,
+          "use_mmap": true,
+          "use_mlock": false,
+          "use_direct_io": false,
+          "verbose": false,
+          "vision_use_gpu": false,
+          "vision_image_min_tokens": -1,
+          "vision_image_max_tokens": -1,
+          "vision_enable_thinking": false,
+          "vision_force_reasoning": false,
+          "vision_add_vision_id": true
+        },
+        "_meta": {
+          "title": "② CPU 翻译参数 · 8 线程"
+        }
+      },
+      "80": {
+        "class_type": "ExcelPromptGlossary",
+        "inputs": {
+          "text": "",
+          "excel_path": "user/default/glossaries/Anima角色作品词典.xlsx",
+          "mode": "Anima 混合",
+          "rules_path": "custom_nodes/comfyui-excel-prompt-glossary/Anima_translation_rules.txt"
+        },
+        "_meta": {
+          "title": "③ 输入中文 · Excel查角色与作品"
+        }
+      },
+      "82": {
+        "class_type": "LlamaCPPEngine",
+        "inputs": {
+          "model": [
+            "78",
+            0
+          ],
+          "options": [
+            "79",
+            0
+          ],
+          "prompt": [
+            "80",
+            0
+          ],
+          "system_prompt": [
+            "80",
+            1
+          ],
+          "memory_cleanup": "close",
+          "response_format": "text",
+          "max_tokens": 512,
+          "temperature": 0.1,
+          "top_p": 0.95,
+          "top_k": 40,
+          "min_p": 0.05,
+          "repeat_penalty": 1.1,
+          "present_penalty": 0,
+          "frequency_penalty": 0,
+          "seed": 1
+        },
+        "_meta": {
+          "title": "④ Qwen CPU 翻译 · 自动接收Excel与指导书"
+        }
+      },
+      "83": {
+        "class_type": "ExcelTranslationCheck",
+        "inputs": {
+          "translation": [
+            "82",
+            0
+          ],
+          "check_data": [
+            "80",
+            3
+          ]
+        },
+        "_meta": {
+          "title": "还原原始标记 · 检查译文"
+        }
+      }
+    },
+    "output": "50",
+    "positive": "80",
+    "negative": "37",
+    "size": "10",
+    "seed": "41",
+    "seedField": "noise_seed",
+    "textField": "text",
+    "negativeField": "text"
+  },
+  "single": {
+    "prompt": {
+      "29": {
+        "class_type": "SaveImage",
+        "inputs": {
+          "images": [
+            "54",
+            0
+          ],
+          "filename_prefix": "ComfyMobile/single"
+        },
+        "_meta": {
+          "title": "SaveImage"
+        }
+      },
+      "53": {
+        "class_type": "KSampler",
+        "inputs": {
+          "model": [
+            "79",
+            0
+          ],
+          "positive": [
+            "84",
+            0
+          ],
+          "negative": [
+            "85",
+            0
+          ],
+          "latent_image": [
+            "82",
+            0
+          ],
+          "seed": 0,
+          "steps": 10,
+          "cfg": 1,
+          "sampler_name": "euler",
+          "scheduler": "simple",
+          "denoise": 1
+        },
+        "_meta": {
+          "title": "KSampler"
+        }
+      },
+      "54": {
+        "class_type": "VAEDecode",
+        "inputs": {
+          "samples": [
+            "53",
+            0
+          ],
+          "vae": [
+            "57",
+            0
+          ]
+        },
+        "_meta": {
+          "title": "VAEDecode"
+        }
+      },
+      "55": {
+        "class_type": "UNETLoader",
+        "inputs": {
+          "unet_name": "krea_kroma_v0.3.1_turbo_opd_w6a8.safetensors",
+          "weight_dtype": "default"
+        },
+        "_meta": {
+          "title": "UNETLoader"
+        }
+      },
+      "56": {
+        "class_type": "CLIPLoader",
+        "inputs": {
+          "clip_name": "qwen3-vl-4b-heretic_fp8_e4m3fn.safetensors",
+          "type": "krea2",
+          "device": "default"
+        },
+        "_meta": {
+          "title": "CLIPLoader"
+        }
+      },
+      "57": {
+        "class_type": "VAELoader",
+        "inputs": {
+          "vae_name": "qwen_image_vae.safetensors"
+        },
+        "_meta": {
+          "title": "VAELoader"
+        }
+      },
+      "71": {
+        "class_type": "LoraLoaderModelOnly",
+        "inputs": {
+          "model": [
+            "55",
+            0
+          ],
+          "lora_name": "krea2_identity_edit_v2_r128.safetensors",
+          "strength_model": 1
+        },
+        "_meta": {
+          "title": "LoraLoaderModelOnly"
+        }
+      },
+      "72": {
+        "class_type": "LoadImage",
+        "inputs": {
+          "image": "mobile-placeholder.png"
+        },
+        "_meta": {
+          "title": "LoadImage"
+        }
+      },
+      "73": {
+        "class_type": "VAEEncode",
+        "inputs": {
+          "pixels": [
+            "72",
+            0
+          ],
+          "vae": [
+            "57",
+            0
+          ]
+        },
+        "_meta": {
+          "title": "VAEEncode"
+        }
+      },
+      "79": {
+        "class_type": "Krea2EditModelPatch",
+        "inputs": {
+          "model": [
+            "71",
+            0
+          ],
+          "source_latent": [
+            "73",
+            0
+          ],
+          "vae": [
+            "57",
+            0
+          ],
+          "source_image": [
+            "72",
+            0
+          ],
+          "target_latent": [
+            "82",
+            0
+          ],
+          "ref_boost": 4,
+          "ref_boost_a": 1,
+          "fit_mode": "fit",
+          "ref_position": "aligned (trained)",
+          "ref_position_a": "aligned (trained)"
+        },
+        "_meta": {
+          "title": "Krea2EditModelPatch"
+        }
+      },
+      "82": {
+        "class_type": "EmptySD3LatentImage",
+        "inputs": {
+          "width": [
+            "mobile_width",
+            1
+          ],
+          "height": [
+            "mobile_height",
+            1
+          ],
+          "batch_size": 1
+        },
+        "_meta": {
+          "title": "EmptySD3LatentImage"
+        }
+      },
+      "84": {
+        "class_type": "Krea2EditGroundedEncode",
+        "inputs": {
+          "clip": [
+            "56",
+            0
+          ],
+          "image": [
+            "72",
+            0
+          ],
+          "prompt": [
+            "126",
+            0
+          ],
+          "grounding_px": 768,
+          "system_prompt": ""
+        },
+        "_meta": {
+          "title": "Krea2EditGroundedEncode"
+        }
+      },
+      "85": {
+        "class_type": "Krea2EditGroundedEncode",
+        "inputs": {
+          "clip": [
+            "56",
+            0
+          ],
+          "image": [
+            "72",
+            0
+          ],
+          "prompt": "",
+          "grounding_px": 768,
+          "system_prompt": ""
+        },
+        "_meta": {
+          "title": "negative (leave empty)"
+        }
+      },
+      "118": {
+        "class_type": "GetImageSizeAndCount",
+        "inputs": {
+          "image": [
+            "72",
+            0
+          ]
+        },
+        "_meta": {
+          "title": "GetImageSizeAndCount"
+        }
+      },
+      "121": {
+        "class_type": "LlamaCPPModelLoader",
+        "inputs": {
+          "model_name": "Qwen2.5-3B-Instruct-Q4_K_M.gguf",
+          "chat_format": "chatml",
+          "mmproj_model_name": "None"
+        },
+        "_meta": {
+          "title": "① Qwen2.5 GGUF · 本地已有模型"
+        }
+      },
+      "122": {
+        "class_type": "LlamaCPPOptions",
+        "inputs": {
+          "n_gpu_layers": 0,
+          "n_ctx": 4096,
+          "n_threads": 8,
+          "n_threads_batch": 8,
+          "n_batch": 512,
+          "n_ubatch": 512,
+          "main_gpu": 0,
+          "offload_kqv": false,
+          "numa": false,
+          "use_mmap": true,
+          "use_mlock": false,
+          "use_direct_io": false,
+          "verbose": false,
+          "vision_use_gpu": false,
+          "vision_image_min_tokens": -1,
+          "vision_image_max_tokens": -1,
+          "vision_enable_thinking": false,
+          "vision_force_reasoning": false,
+          "vision_add_vision_id": true
+        },
+        "_meta": {
+          "title": "② CPU 翻译参数 · 8 线程"
+        }
+      },
+      "123": {
+        "class_type": "ExcelPromptGlossary",
+        "inputs": {
+          "text": "",
+          "excel_path": "user/default/glossaries/Anima角色作品词典.xlsx",
+          "mode": "Anima 混合",
+          "rules_path": "custom_nodes/comfyui-excel-prompt-glossary/Anima_translation_rules.txt"
+        },
+        "_meta": {
+          "title": "③ 输入中文 · Excel查角色与作品"
+        }
+      },
+      "125": {
+        "class_type": "LlamaCPPEngine",
+        "inputs": {
+          "model": [
+            "121",
+            0
+          ],
+          "options": [
+            "122",
+            0
+          ],
+          "prompt": [
+            "123",
+            0
+          ],
+          "system_prompt": [
+            "123",
+            1
+          ],
+          "memory_cleanup": "close",
+          "response_format": "text",
+          "max_tokens": 512,
+          "temperature": 0.1,
+          "top_p": 0.95,
+          "top_k": 40,
+          "min_p": 0.05,
+          "repeat_penalty": 1.1,
+          "present_penalty": 0,
+          "frequency_penalty": 0,
+          "seed": 1
+        },
+        "_meta": {
+          "title": "④ Qwen CPU 翻译 · 自动接收Excel与指导书"
+        }
+      },
+      "126": {
+        "class_type": "ExcelTranslationCheck",
+        "inputs": {
+          "translation": [
+            "125",
+            0
+          ],
+          "check_data": [
+            "123",
+            3
+          ]
+        },
+        "_meta": {
+          "title": "还原原始标记 · 检查译文"
+        }
+      },
+      "mobile_width": {
+        "class_type": "ComfyMathExpression",
+        "inputs": {
+          "expression": "max(64, round(a * b / 8) * 8)",
+          "values.a": [
+            "118",
+            1
+          ],
+          "values.b": 1
+        },
+        "_meta": {
+          "title": "原图width按比例缩放"
+        }
+      },
+      "mobile_height": {
+        "class_type": "ComfyMathExpression",
+        "inputs": {
+          "expression": "max(64, round(a * b / 8) * 8)",
+          "values.a": [
+            "118",
+            2
+          ],
+          "values.b": 1
+        },
+        "_meta": {
+          "title": "原图height按比例缩放"
+        }
+      }
+    },
+    "output": "29",
+    "positive": "123",
+    "negative": "85",
+    "size": "82",
+    "seed": "53",
+    "seedField": "seed",
+    "textField": "text",
+    "negativeField": "prompt"
+  },
+  "dual": {
+    "prompt": {
+      "29": {
+        "class_type": "SaveImage",
+        "inputs": {
+          "images": [
+            "54",
+            0
+          ],
+          "filename_prefix": "ComfyMobile/dual"
+        },
+        "_meta": {
+          "title": "SaveImage"
+        }
+      },
+      "53": {
+        "class_type": "KSampler",
+        "inputs": {
+          "model": [
+            "79",
+            0
+          ],
+          "positive": [
+            "84",
+            0
+          ],
+          "negative": [
+            "85",
+            0
+          ],
+          "latent_image": [
+            "82",
+            0
+          ],
+          "seed": 0,
+          "steps": 10,
+          "cfg": 1,
+          "sampler_name": "euler",
+          "scheduler": "simple",
+          "denoise": 1
+        },
+        "_meta": {
+          "title": "KSampler"
+        }
+      },
+      "54": {
+        "class_type": "VAEDecode",
+        "inputs": {
+          "samples": [
+            "53",
+            0
+          ],
+          "vae": [
+            "57",
+            0
+          ]
+        },
+        "_meta": {
+          "title": "VAEDecode"
+        }
+      },
+      "55": {
+        "class_type": "UNETLoader",
+        "inputs": {
+          "unet_name": "krea_kroma_v0.3.1_turbo_opd_w6a8.safetensors",
+          "weight_dtype": "default"
+        },
+        "_meta": {
+          "title": "UNETLoader"
+        }
+      },
+      "56": {
+        "class_type": "CLIPLoader",
+        "inputs": {
+          "clip_name": "qwen3-vl-4b-heretic_fp8_e4m3fn.safetensors",
+          "type": "krea2",
+          "device": "default"
+        },
+        "_meta": {
+          "title": "CLIPLoader"
+        }
+      },
+      "57": {
+        "class_type": "VAELoader",
+        "inputs": {
+          "vae_name": "qwen_image_vae.safetensors"
+        },
+        "_meta": {
+          "title": "VAELoader"
+        }
+      },
+      "71": {
+        "class_type": "LoraLoaderModelOnly",
+        "inputs": {
+          "model": [
+            "55",
+            0
+          ],
+          "lora_name": "krea2_identity_edit_v2_r128.safetensors",
+          "strength_model": 1
+        },
+        "_meta": {
+          "title": "LoraLoaderModelOnly"
+        }
+      },
+      "72": {
+        "class_type": "LoadImage",
+        "inputs": {
+          "image": "mobile-placeholder.png"
+        },
+        "_meta": {
+          "title": "LoadImage"
+        }
+      },
+      "73": {
+        "class_type": "VAEEncode",
+        "inputs": {
+          "pixels": [
+            "72",
+            0
+          ],
+          "vae": [
+            "57",
+            0
+          ]
+        },
+        "_meta": {
+          "title": "VAEEncode"
+        }
+      },
+      "79": {
+        "class_type": "Krea2EditModelPatch",
+        "inputs": {
+          "model": [
+            "71",
+            0
+          ],
+          "source_latent": [
+            "73",
+            0
+          ],
+          "vae": [
+            "57",
+            0
+          ],
+          "source_image": [
+            "72",
+            0
+          ],
+          "source_image_b": [
+            "90",
+            0
+          ],
+          "target_latent": [
+            "82",
+            0
+          ],
+          "ref_boost": 4,
+          "ref_boost_a": 1,
+          "fit_mode": "fit",
+          "ref_position": "aligned (trained)",
+          "ref_position_a": "aligned (trained)"
+        },
+        "_meta": {
+          "title": "Krea2EditModelPatch"
+        }
+      },
+      "82": {
+        "class_type": "EmptySD3LatentImage",
+        "inputs": {
+          "width": [
+            "mobile_width",
+            1
+          ],
+          "height": [
+            "mobile_height",
+            1
+          ],
+          "batch_size": 1
+        },
+        "_meta": {
+          "title": "EmptySD3LatentImage"
+        }
+      },
+      "84": {
+        "class_type": "Krea2EditGroundedEncode",
+        "inputs": {
+          "clip": [
+            "56",
+            0
+          ],
+          "image": [
+            "72",
+            0
+          ],
+          "image_b": [
+            "90",
+            0
+          ],
+          "prompt": [
+            "126",
+            0
+          ],
+          "grounding_px": 768,
+          "system_prompt": ""
+        },
+        "_meta": {
+          "title": "Krea2EditGroundedEncode"
+        }
+      },
+      "85": {
+        "class_type": "Krea2EditGroundedEncode",
+        "inputs": {
+          "clip": [
+            "56",
+            0
+          ],
+          "image": [
+            "72",
+            0
+          ],
+          "image_b": [
+            "90",
+            0
+          ],
+          "prompt": "",
+          "grounding_px": 768,
+          "system_prompt": ""
+        },
+        "_meta": {
+          "title": "negative (leave empty)"
+        }
+      },
+      "90": {
+        "class_type": "LoadImage",
+        "inputs": {
+          "image": "mobile-placeholder-2.png"
+        },
+        "_meta": {
+          "title": "LoadImage"
+        }
+      },
+      "118": {
+        "class_type": "GetImageSizeAndCount",
+        "inputs": {
+          "image": [
+            "72",
+            0
+          ]
+        },
+        "_meta": {
+          "title": "GetImageSizeAndCount"
+        }
+      },
+      "121": {
+        "class_type": "LlamaCPPModelLoader",
+        "inputs": {
+          "model_name": "Qwen2.5-3B-Instruct-Q4_K_M.gguf",
+          "chat_format": "chatml",
+          "mmproj_model_name": "None"
+        },
+        "_meta": {
+          "title": "① Qwen2.5 GGUF · 本地已有模型"
+        }
+      },
+      "122": {
+        "class_type": "LlamaCPPOptions",
+        "inputs": {
+          "n_gpu_layers": 0,
+          "n_ctx": 4096,
+          "n_threads": 8,
+          "n_threads_batch": 8,
+          "n_batch": 512,
+          "n_ubatch": 512,
+          "main_gpu": 0,
+          "offload_kqv": false,
+          "numa": false,
+          "use_mmap": true,
+          "use_mlock": false,
+          "use_direct_io": false,
+          "verbose": false,
+          "vision_use_gpu": false,
+          "vision_image_min_tokens": -1,
+          "vision_image_max_tokens": -1,
+          "vision_enable_thinking": false,
+          "vision_force_reasoning": false,
+          "vision_add_vision_id": true
+        },
+        "_meta": {
+          "title": "② CPU 翻译参数 · 8 线程"
+        }
+      },
+      "123": {
+        "class_type": "ExcelPromptGlossary",
+        "inputs": {
+          "text": "",
+          "excel_path": "user/default/glossaries/Anima角色作品词典.xlsx",
+          "mode": "Anima 混合",
+          "rules_path": "custom_nodes/comfyui-excel-prompt-glossary/Anima_translation_rules.txt"
+        },
+        "_meta": {
+          "title": "③ 输入中文 · Excel查角色与作品"
+        }
+      },
+      "125": {
+        "class_type": "LlamaCPPEngine",
+        "inputs": {
+          "model": [
+            "121",
+            0
+          ],
+          "options": [
+            "122",
+            0
+          ],
+          "prompt": [
+            "123",
+            0
+          ],
+          "system_prompt": [
+            "123",
+            1
+          ],
+          "memory_cleanup": "close",
+          "response_format": "text",
+          "max_tokens": 512,
+          "temperature": 0.1,
+          "top_p": 0.95,
+          "top_k": 40,
+          "min_p": 0.05,
+          "repeat_penalty": 1.1,
+          "present_penalty": 0,
+          "frequency_penalty": 0,
+          "seed": 1
+        },
+        "_meta": {
+          "title": "④ Qwen CPU 翻译 · 自动接收Excel与指导书"
+        }
+      },
+      "126": {
+        "class_type": "ExcelTranslationCheck",
+        "inputs": {
+          "translation": [
+            "125",
+            0
+          ],
+          "check_data": [
+            "123",
+            3
+          ]
+        },
+        "_meta": {
+          "title": "还原原始标记 · 检查译文"
+        }
+      },
+      "mobile_width": {
+        "class_type": "ComfyMathExpression",
+        "inputs": {
+          "expression": "max(64, round(a * b / 8) * 8)",
+          "values.a": [
+            "118",
+            1
+          ],
+          "values.b": 1
+        },
+        "_meta": {
+          "title": "原图width按比例缩放"
+        }
+      },
+      "mobile_height": {
+        "class_type": "ComfyMathExpression",
+        "inputs": {
+          "expression": "max(64, round(a * b / 8) * 8)",
+          "values.a": [
+            "118",
+            2
+          ],
+          "values.b": 1
+        },
+        "_meta": {
+          "title": "原图height按比例缩放"
+        }
+      }
+    },
+    "output": "29",
+    "positive": "123",
+    "negative": "85",
+    "size": "82",
+    "seed": "53",
+    "seedField": "seed",
+    "textField": "text",
+    "negativeField": "prompt"
+  },
+  "anima": {
+    "prompt": {
+      "8": {
+        "class_type": "VAEDecode",
+        "inputs": {
+          "samples": [
+            "19",
+            0
+          ],
+          "vae": [
+            "15",
+            0
+          ]
+        },
+        "_meta": {
+          "title": "VAEDecode"
+        }
+      },
+      "11": {
+        "class_type": "CLIPTextEncode",
+        "inputs": {
+          "clip": [
+            "45",
+            0
+          ],
+          "text": [
+            "58",
+            0
+          ]
+        },
+        "_meta": {
+          "title": "CLIP Text Encode (Positive Prompt)"
+        }
+      },
+      "12": {
+        "class_type": "CLIPTextEncode",
+        "inputs": {
+          "clip": [
+            "45",
+            0
+          ],
+          "text": ""
+        },
+        "_meta": {
+          "title": "CLIP Text Encode (Negative Prompt)"
+        }
+      },
+      "15": {
+        "class_type": "VAELoader",
+        "inputs": {
+          "vae_name": "qwen_image_vae.safetensors"
+        },
+        "_meta": {
+          "title": "VAELoader"
+        }
+      },
+      "19": {
+        "class_type": "KSampler",
+        "inputs": {
+          "model": [
+            "44",
+            0
+          ],
+          "positive": [
+            "11",
+            0
+          ],
+          "negative": [
+            "12",
+            0
+          ],
+          "latent_image": [
+            "28",
+            0
+          ],
+          "seed": 0,
+          "steps": 32,
+          "cfg": 4,
+          "sampler_name": "er_sde",
+          "scheduler": "simple",
+          "denoise": 1
+        },
+        "_meta": {
+          "title": "KSampler"
+        }
+      },
+      "28": {
+        "class_type": "EmptyLatentImage",
+        "inputs": {
+          "width": 1024,
+          "height": 1024,
+          "batch_size": 1
+        },
+        "_meta": {
+          "title": "EmptyLatentImage"
+        }
+      },
+      "44": {
+        "class_type": "UNETLoader",
+        "inputs": {
+          "unet_name": "anima-base-v1.0.safetensors",
+          "weight_dtype": "default"
+        },
+        "_meta": {
+          "title": "UNETLoader"
+        }
+      },
+      "45": {
+        "class_type": "CLIPLoader",
+        "inputs": {
+          "clip_name": "qwen_3_06b_base.safetensors",
+          "type": "stable_diffusion",
+          "device": "default"
+        },
+        "_meta": {
+          "title": "CLIPLoader"
+        }
+      },
+      "46": {
+        "class_type": "SaveImage",
+        "inputs": {
+          "images": [
+            "8",
+            0
+          ],
+          "filename_prefix": "ComfyMobile/anima"
+        },
+        "_meta": {
+          "title": "SaveImage"
+        }
+      },
+      "49": {
+        "class_type": "LlamaCPPModelLoader",
+        "inputs": {
+          "model_name": "Qwen2.5-3B-Instruct-Q4_K_M.gguf",
+          "chat_format": "chatml",
+          "mmproj_model_name": "None"
+        },
+        "_meta": {
+          "title": "① Qwen2.5 GGUF · 本地已有模型"
+        }
+      },
+      "50": {
+        "class_type": "LlamaCPPOptions",
+        "inputs": {
+          "n_gpu_layers": 0,
+          "n_ctx": 4096,
+          "n_threads": 8,
+          "n_threads_batch": 8,
+          "n_batch": 512,
+          "n_ubatch": 512,
+          "main_gpu": 0,
+          "offload_kqv": false,
+          "numa": false,
+          "use_mmap": true,
+          "use_mlock": false,
+          "use_direct_io": false,
+          "verbose": false,
+          "vision_use_gpu": false,
+          "vision_image_min_tokens": -1,
+          "vision_image_max_tokens": -1,
+          "vision_enable_thinking": false,
+          "vision_force_reasoning": false,
+          "vision_add_vision_id": true
+        },
+        "_meta": {
+          "title": "② CPU 翻译参数 · 8 线程"
+        }
+      },
+      "51": {
+        "class_type": "ExcelPromptGlossary",
+        "inputs": {
+          "text": "",
+          "excel_path": "user/default/glossaries/Anima角色作品词典.xlsx",
+          "mode": "Anima 混合",
+          "rules_path": "custom_nodes/comfyui-excel-prompt-glossary/Anima_translation_rules.txt"
+        },
+        "_meta": {
+          "title": "③ 输入中文 · Excel查角色与作品"
+        }
+      },
+      "53": {
+        "class_type": "LlamaCPPEngine",
+        "inputs": {
+          "model": [
+            "49",
+            0
+          ],
+          "options": [
+            "50",
+            0
+          ],
+          "prompt": [
+            "51",
+            0
+          ],
+          "system_prompt": [
+            "51",
+            1
+          ],
+          "memory_cleanup": "close",
+          "response_format": "text",
+          "max_tokens": 512,
+          "temperature": 0.1,
+          "top_p": 0.95,
+          "top_k": 40,
+          "min_p": 0.05,
+          "repeat_penalty": 1.1,
+          "present_penalty": 0,
+          "frequency_penalty": 0,
+          "seed": 1
+        },
+        "_meta": {
+          "title": "④ Qwen CPU 翻译 · 自动接收Excel与指导书"
+        }
+      },
+      "54": {
+        "class_type": "ExcelTranslationCheck",
+        "inputs": {
+          "translation": [
+            "53",
+            0
+          ],
+          "check_data": [
+            "51",
+            3
+          ]
+        },
+        "_meta": {
+          "title": "还原原始标记 · 检查译文"
+        }
+      },
+      "58": {
+        "class_type": "AnimaArtistGallery",
+        "inputs": {
+          "prompt": [
+            "54",
+            0
+          ],
+          "artist": "WLOP · wlop"
+        },
+        "_meta": {
+          "title": "画师选择 · 点击例图 / ☆置顶"
+        }
+      }
+    },
+    "output": "46",
+    "positive": "51",
+    "negative": "12",
+    "size": "28",
+    "seed": "19",
+    "seedField": "seed",
+    "textField": "text",
+    "negativeField": "text",
+    "modelNode": "44",
+    "samplerNode": "19",
+    "artistNode": "58",
+    "defaultArtist": "WLOP · wlop",
+    "artistOptions": [
+      "不添加画师（原文直通）",
+      "米山舞 · yoneyama mai",
+      "WLOP · wlop",
+      "ASK · ask \\(askzy\\)",
+      "Ciloranko · ciloranko",
+      "Rella · rella",
+      "Mika Pikazo · mika pikazo",
+      "LAM · lam \\(ramdayo\\)",
+      "lack · lack",
+      "Hiten · hiten \\(hitenkei\\)",
+      "モグモ · mogumo",
+      "藤ちょこ · fuzichoco",
+      "redjuice · redjuice",
+      "torino · torino aqua",
+      "Nardack · nardack",
+      "Tony · tony taka",
+      "カントク · kantoku",
+      "BUNBUN · bunbun",
+      "しぐれうい · shigure ui",
+      "loundraw · loundraw",
+      "Krenz · krenz",
+      "GUWEIZ · guweiz",
+      "武内崇 · takeuchi takashi",
+      "Ixy · ixy",
+      "mignon · mignon",
+      "SWAV · swav",
+      "Sa-fu · sa-fu \\(sfmk39\\)",
+      "七原しえ · nanahara shie",
+      "Ilya Kuvshinov · ilya kuvshinov",
+      "VOFAN · vofan",
+      "toi8 · toi8",
+      "huke · huke",
+      "さいとうなおき · saitou naoki",
+      "齋藤将嗣 · saitou masatsugu",
+      "しらび · shirabi",
+      "Anmi · anmi",
+      "dairi · dairi",
+      "えびふりゃ · ebifurya",
+      "なもり · namori",
+      "アボガド6 · avogado6",
+      "ちふり · chihuri"
+    ],
+    "models": {
+      "base": {
+        "file": "anima-base-v1.0.safetensors",
+        "steps": 32,
+        "cfg": 4
+      },
+      "turbo": {
+        "file": "anima-turbo-v1.1.safetensors",
+        "steps": 10,
+        "cfg": 1
+      }
+    }
+  }
+}

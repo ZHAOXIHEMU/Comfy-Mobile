@@ -1,0 +1,12 @@
+{
+  "name": "comfy-mobile-tests",
+  "private": true,
+  "version": "1.6.4",
+  "scripts": {
+    "test": "node test-v140.cjs && node test-v160.cjs && node test-v161.cjs && node test-v162.cjs && node test-v163.cjs && node test-v164.cjs && node test-v111.cjs && node test-preview-v141.cjs",
+    "test:layout": "node test-layout-v164.cjs"
+  },
+  "devDependencies": {
+    "linkedom": "0.18.12"
+  }
+}

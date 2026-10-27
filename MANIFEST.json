@@ -1,0 +1,760 @@
+{
+  "version": "1.6.4",
+  "files": [
+    {
+      "path": ".gitattributes",
+      "bytes": 150,
+      "sha256": "b72fdca630114ca94be960c786f359b1e15c43aa083485b603cf16574d49797b"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 280,
+      "sha256": "17d834b3adebcc9d086d78c9bef09d8d31f362b4dafa1d889b8bff4847e60c8e"
+    },
+    {
+      "path": "android/AndroidManifest.xml",
+      "bytes": 1880,
+      "sha256": "c4d644eef894534df82fedb7e9cda6274dbbd57c15c7f75f1d699c61b88e73b8"
+    },
+    {
+      "path": "android/assets/anime.js",
+      "bytes": 9410,
+      "sha256": "ebaff322de86bb95ffdcb3e2a08c49e25adc4273303e6471f4c2f8ee76e860db"
+    },
+    {
+      "path": "android/assets/app.js",
+      "bytes": 10901,
+      "sha256": "8260e0d4ce06b8bb4f0e22316bc8c88c6629970cb48649ad82525035ff643d5d"
+    },
+    {
+      "path": "android/assets/artists.json",
+      "bytes": 4047,
+      "sha256": "11ba9bd4d0e7eee9e1ba297858352fea1fee9a102d7952575a9846370058d773"
+    },
+    {
+      "path": "android/assets/batch.js",
+      "bytes": 12771,
+      "sha256": "5b2e002920839820582a57458d53eb85800b711e45ec719f2a4ed26f97ddf1f6"
+    },
+    {
+      "path": "android/assets/boot.js",
+      "bytes": 54,
+      "sha256": "d2dbeb350d78d2f882e6aaeebfae20d1c72c974d9ce16d0c8cafdcabbcf7b400"
+    },
+    {
+      "path": "android/assets/gallery.js",
+      "bytes": 20383,
+      "sha256": "0900e09d747f3d0689a673fba29cef58dd2c76f6e57b64c21cd37f357f988db3"
+    },
+    {
+      "path": "android/assets/image-sizing.js",
+      "bytes": 5971,
+      "sha256": "74f68bdeb0198f03491236fe5da63a979d93a1023e458b2189a3ffa1191a5aa4"
+    },
+    {
+      "path": "android/assets/index.html",
+      "bytes": 15909,
+      "sha256": "81170ae2ac4a67af7f1dccd6165de1dbe7ba104c5c529193a623d9843bbe6fd8"
+    },
+    {
+      "path": "android/assets/navigation.js",
+      "bytes": 4543,
+      "sha256": "2b1ded175decbed91bedb8c2ec9e58c8e4fe2d55272f453ceaae1d72abf50b23"
+    },
+    {
+      "path": "android/assets/prompt-library.js",
+      "bytes": 4784,
+      "sha256": "39abc36d1f86c0e1e746725d9626b43cb8bd42adc69c7d05637015aa8a3d4603"
+    },
+    {
+      "path": "android/assets/style.css",
+      "bytes": 29444,
+      "sha256": "ef6a37c47d7c852e5e2fd318c15922f6eacb5d4a73716f51d99bb4b171c708ab"
+    },
+    {
+      "path": "android/assets/vendor/xlsx.full.min.js",
+      "bytes": 951904,
+      "sha256": "cc015130aa8521e7f088f88898eba949ccdcbfb38df0bd129b44b7273c3a6f41"
+    },
+    {
+      "path": "android/assets/workflows.json",
+      "bytes": 33999,
+      "sha256": "e65dcbc46e383a21cf59925d69d1d7ff43a6b017290e94b4357505d6d853f693"
+    },
+    {
+      "path": "android/build.ps1",
+      "bytes": 5038,
+      "sha256": "572bb295054ed65de0f4e8cff6367777227b52cdbd3cbe041c3445ead52bb0f9"
+    },
+    {
+      "path": "android/integration_remote_batches.py",
+      "bytes": 5704,
+      "sha256": "87c6e94a6f37e02bdacbef741b611177f31029b361bf8b918e18138533b6c4ad"
+    },
+    {
+      "path": "android/lib/okhttp.jar",
+      "bytes": 430488,
+      "sha256": "2570fab55515cbf881d7a4ceef49fc515490bc027057e666776a2832465aeca0"
+    },
+    {
+      "path": "android/lib/okio.jar",
+      "bytes": 91980,
+      "sha256": "f80ce42d2ffac47ad4c47e1d6f980d604d247ceb1a886705cf4581ab0c9fe2b8"
+    },
+    {
+      "path": "android/package-lock.json",
+      "bytes": 7533,
+      "sha256": "406dabab9c2c2c17d580503e24175ecafcf99bf05404ee02cf5e42d3691c7174"
+    },
+    {
+      "path": "android/package.json",
+      "bytes": 405,
+      "sha256": "79168845cb8b688929df6436bba2b103f3d8834ca8a447560b52a18331fc7809"
+    },
+    {
+      "path": "android/prepare-workflows.cjs",
+      "bytes": 4812,
+      "sha256": "fa06cf7a8738e8ac4d6000a1d75caad8a12b4a59885c030e00091b4153122fbd"
+    },
+    {
+      "path": "android/res/drawable/app_icon.xml",
+      "bytes": 460,
+      "sha256": "3cb1e33d73cc02144b9e497e58a956c0034904bd2bc84a379158a9ac0ec0ca4b"
+    },
+    {
+      "path": "android/res/values/styles.xml",
+      "bytes": 279,
+      "sha256": "c996866908f5caf5898cd5db4c6d81cef32242bbcab7f8c4ecc8d5ff53052bb5"
+    },
+    {
+      "path": "android/src/com/comfymobile/app/AlbumIndex.java",
+      "bytes": 2425,
+      "sha256": "4cec5233383a8f7a00435aed73f94462627002fc87fb5738f8e0f14f5ae9dc03"
+    },
+    {
+      "path": "android/src/com/comfymobile/app/ArtistCache.java",
+      "bytes": 5441,
+      "sha256": "87c9e0c8ee1ca4632d3769266d7285024caac26d02fb4ca1050457cf5bdc0efb"
+    },
+    {
+      "path": "android/src/com/comfymobile/app/BatchEngine.java",
+      "bytes": 18318,
+      "sha256": "05bc12245db52185667fc0a5e7b90d06f6c2638d4a3880de7efaf1e89f4cd4db"
+    },
+    {
+      "path": "android/src/com/comfymobile/app/BatchStore.java",
+      "bytes": 6545,
+      "sha256": "ed3b09443ee772a7993193a01ac5aeaefec3c12176498da5e368d5330e940f1b"
+    },
+    {
+      "path": "android/src/com/comfymobile/app/ComfyApplication.java",
+      "bytes": 958,
+      "sha256": "85ffdac3dfbeb2282ba834507f552d0da08737ca38f0fe6fb77126de3b6623dc"
+    },
+    {
+      "path": "android/src/com/comfymobile/app/ForegroundSession.java",
+      "bytes": 409,
+      "sha256": "1220d85b9fdd515ebb2d63168fef117bcb68bef58aefef51a59b49981c6cae99"
+    },
+    {
+      "path": "android/src/com/comfymobile/app/ImagePickerActivity.java",
+      "bytes": 21681,
+      "sha256": "19ad0953000a6c297e52e66ef47c290f4ff95d8044a54263b4f5dee6640c045c"
+    },
+    {
+      "path": "android/src/com/comfymobile/app/MainActivity.java",
+      "bytes": 18369,
+      "sha256": "099ca422e83201a835ba54760e8c6751ba1ea84e6b708741c0ca712ccb94e098"
+    },
+    {
+      "path": "android/src/com/comfymobile/app/NativeBatchService.java",
+      "bytes": 10296,
+      "sha256": "9e690ba25dbf8202f55958b911e284b9e9150f2915a73ed9e6624f25aa479eb6"
+    },
+    {
+      "path": "android/src/com/comfymobile/app/PhotoLibrary.java",
+      "bytes": 5594,
+      "sha256": "c617e3842291491d198a0ea6ff9b24f3febb99b1857685fa181fc764743ad82f"
+    },
+    {
+      "path": "android/test-harness.cjs",
+      "bytes": 3589,
+      "sha256": "783905ef6a686c54080e804cd743eb38013b4a5b6f989c70752d61293b16872f"
+    },
+    {
+      "path": "android/test-layout-v164.cjs",
+      "bytes": 9072,
+      "sha256": "f3960875ee398b9fb6cd6c64e5fbf61bd78aa9d308f27a2d4ed7f4303d540c81"
+    },
+    {
+      "path": "android/test-lib/json-tests.jar",
+      "bytes": 78332,
+      "sha256": "3cf6cd6892e32e2b4c1c39e0f52f5248a2f5b37646fdfbb79a66b46b618414ed"
+    },
+    {
+      "path": "android/test-native/com/comfymobile/app/AlbumIndexTest.java",
+      "bytes": 3263,
+      "sha256": "0eae274ab793923828c8a41488caef13be2154b69f510983e4a4bf6c8085ab14"
+    },
+    {
+      "path": "android/test-native/com/comfymobile/app/AnimeWorkflowTest.java",
+      "bytes": 4302,
+      "sha256": "ced07254af70ad0e6ed03fd9dde0329a089745db8591a7dac8549d554ee2921a"
+    },
+    {
+      "path": "android/test-native/com/comfymobile/app/ArtistCacheHttpTest.java",
+      "bytes": 2082,
+      "sha256": "5f1e617ac357ab5a26feb87d730f4d1304676afdf3500a270d96ea603b14d006"
+    },
+    {
+      "path": "android/test-native/com/comfymobile/app/ArtistCacheTest.java",
+      "bytes": 3254,
+      "sha256": "ced181a3cd89f625ecf3b49ae8203bda29fab2a6506a7a4366c5f5bb8e88fc89"
+    },
+    {
+      "path": "android/test-native/com/comfymobile/app/BatchEngineTest.java",
+      "bytes": 9321,
+      "sha256": "6dfa96eac1ab656df39568963906724f1e4d221691e94edacb01f814adf94b85"
+    },
+    {
+      "path": "android/test-native/com/comfymobile/app/ErrorSummaryTest.java",
+      "bytes": 929,
+      "sha256": "848992ae833ba6fe8e6430ee0e278b770ef49226ccb3eb760194cb900b4a4cc2"
+    },
+    {
+      "path": "android/test-native/com/comfymobile/app/ForegroundSessionTest.java",
+      "bytes": 990,
+      "sha256": "4ba9b7cc6a96f2e7bad43e1c4e9f80c4c5d40451b76243c7526c5d05d6b22663"
+    },
+    {
+      "path": "android/test-native/com/comfymobile/app/RemoteBatchEngineTest.java",
+      "bytes": 6749,
+      "sha256": "d16b16cf615610842aa429d8bf5de7f68cff16b3e66a3d75f32f4f385519702a"
+    },
+    {
+      "path": "android/test-native/com/comfymobile/app/RemoteBatchHttpTest.java",
+      "bytes": 4457,
+      "sha256": "94efb57f70c271cb4bebd62a97ed3829efc34364b0d9f4411f2be7c3052eec91"
+    },
+    {
+      "path": "android/test-native.ps1",
+      "bytes": 1131,
+      "sha256": "622410e8413363f7b30ac3c120d4cdbcae0628407933af75e268a928200b099b"
+    },
+    {
+      "path": "android/test-preview-v141.cjs",
+      "bytes": 8848,
+      "sha256": "7564fd0013d5d9504cb10111d0f22eff35e323681fc26fd92a687746594c33ae"
+    },
+    {
+      "path": "android/test-v111.cjs",
+      "bytes": 3711,
+      "sha256": "d20449b5d849712d6a26f2b4e76f3bcb74d6a0b9bda35e36c709dd61171b5592"
+    },
+    {
+      "path": "android/test-v140.cjs",
+      "bytes": 6630,
+      "sha256": "2c136c9362b0a7b371529ef44a7610fd60d2d570a883322e2baa665c1fc6cd18"
+    },
+    {
+      "path": "android/test-v160.cjs",
+      "bytes": 5303,
+      "sha256": "7b2407bcf37fde0445fcce296d205b0809cdb14143ba0f4db25079dccabbacf0"
+    },
+    {
+      "path": "android/test-v161.cjs",
+      "bytes": 6455,
+      "sha256": "9e6afafc8b0daa38c692d6e0152456955e4b57c519aff3e797a8bfcacc4528f5"
+    },
+    {
+      "path": "android/test-v162.cjs",
+      "bytes": 7560,
+      "sha256": "0b4a6aaf7fcbd94c9c6fc0f46e87a76b28509fd2da3b220d26db05d38b38c1f6"
+    },
+    {
+      "path": "android/test-v163.cjs",
+      "bytes": 3671,
+      "sha256": "6a0fd25bcc94ef403e74a619369de6d2058c317461bf0268395d74abc736e86d"
+    },
+    {
+      "path": "android/test-v164.cjs",
+      "bytes": 1220,
+      "sha256": "6639de439f8e956de6f100ed848a9e070e77a09f38cf2b1dd8a1e5dcf7590839"
+    },
+    {
+      "path": "android/test_computer_batches.py",
+      "bytes": 6527,
+      "sha256": "329fc428d12775f0b09a861c4630c4bee0d771ebe1ef37005dd4263374045214"
+    },
+    {
+      "path": "android/test_desktop_workflows.py",
+      "bytes": 5653,
+      "sha256": "df4cb4c485d06d9dcfcf2a5a938eebf7b22b366b8f2a228f01689c4e93b537d5"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "bytes": 30325,
+      "sha256": "a3b2cae9210d2eff0d1a170cb5bb2bcf0581f10877afef8e234bf5944843d40f"
+    },
+    {
+      "path": "computer/custom_nodes/comfy-mobile-batch/__init__.py",
+      "bytes": 3807,
+      "sha256": "5549f2ffd4eec9c37ba3c07a06aa282515661f71828e8c0b8073470422fdde2f"
+    },
+    {
+      "path": "computer/custom_nodes/comfy-mobile-batch/manager.py",
+      "bytes": 7282,
+      "sha256": "59c518479a40c3c5144b6d84542caa163588c0dac3d9039ba29be3fcab4410aa"
+    },
+    {
+      "path": "computer/custom_nodes/comfy-mobile-batch/workflows.py",
+      "bytes": 4485,
+      "sha256": "f226fc388f953cbc055fa9ee9eba755c3aab5c09e67d21da86fe006fa32a284f"
+    },
+    {
+      "path": "computer/custom_nodes/comfyui-anima-artist-gallery/__init__.py",
+      "bytes": 3747,
+      "sha256": "763a5d1b0a63655ca056d4cf9b47b93793a2a7f0231c059e59590ec6f73709f3"
+    },
+    {
+      "path": "computer/custom_nodes/comfyui-anima-artist-gallery/artists.json",
+      "bytes": 20206,
+      "sha256": "0d3ea2ff90679a4cd744dd69f92263e553ca8a7aea1ada3a5765a96f794ff1ac"
+    },
+    {
+      "path": "computer/custom_nodes/comfyui-anima-artist-gallery/pinned.example.json",
+      "bytes": 4,
+      "sha256": "a5338d955b09046ec0b16f3a9625b7955c763aae07dc722e474e6078745f932f"
+    },
+    {
+      "path": "computer/custom_nodes/comfyui-anima-artist-gallery/previews/a104070.png",
+      "bytes": 1335744,
+      "sha256": "e05fac55d0119f4281e9ba94a03c5ce4f977d27cb49e98df62dfefd09e2381ab"
+    },
+    {
+      "path": "computer/custom_nodes/comfyui-anima-artist-gallery/previews/a104343.png",
+      "bytes": 1482932,
+      "sha256": "a407d7148eca296fc83ed44a177da1d4ee7176762f1d07dd21f6066c4d958011"
+    },
+    {
+      "path": "computer/custom_nodes/comfyui-anima-artist-gallery/previews/a11010.png",
+      "bytes": 1309334,
+      "sha256": "b0bc698d2e17f87513e4515bc9e0a0f76018ad344dcce6637a274690c4034227"
+    },
+    {
+      "path": "computer/custom_nodes/comfyui-anima-artist-gallery/previews/a122964.png",
+      "bytes": 1319013,
+      "sha256": "61ebff6465cd27ebf0f2968159e5588f8d2f5f4ff5b51c9044cd2baf9a261160"
+    },
+    {
+      "path": "computer/custom_nodes/comfyui-anima-artist-gallery/previews/a12545.png",
+      "bytes": 1455825,
+      "sha256": "fdccd0294cf2e6f830e1b02940ed36b958d0f123560f83a02b95e7a022a974e8"
+    },
+    {
+      "path": "computer/custom_nodes/comfyui-anima-artist-gallery/previews/a129952.png",
+      "bytes": 1299210,
+      "sha256": "6b8847d713f2c9db871e788f52abbd3c3d7afd9dfb04b507f25c38c148ef78c4"
+    },
+    {
+      "path": "computer/custom_nodes/comfyui-anima-artist-gallery/previews/a13778.png",
+      "bytes": 1275438,
+      "sha256": "f28eadaf0d2b4631eba555b6a48d1bfab13da4892c33beb3c7740d1192d30365"
+    },
+    {
+      "path": "computer/custom_nodes/comfyui-anima-artist-gallery/previews/a14315.png",
+      "bytes": 1493433,
+      "sha256": "52a3cdbb78bb6fb726df4c01ca57e43f8c690f91ca6f6d187ac26f2b438af015"
+    },
+    {
+      "path": "computer/custom_nodes/comfyui-anima-artist-gallery/previews/a14435.png",
+      "bytes": 1355574,
+      "sha256": "fe48153deabbd8d4aa7ccec12d17775fae2b50ecb64edb6b106a5846067e72bd"
+    },
+    {
+      "path": "computer/custom_nodes/comfyui-anima-artist-gallery/previews/a149170.png",
+      "bytes": 1029018,
+      "sha256": "21f7ef63f6f0ebb4903117f1705012b1aab9649d26f1dab246334d28ed588150"
+    },
+    {
+      "path": "computer/custom_nodes/comfyui-anima-artist-gallery/previews/a163972.png",
+      "bytes": 1210778,
+      "sha256": "fc84f6dac3af5f2f25e84695191737cf0c640ceda52df060230cdd924cf2411d"
+    },
+    {
+      "path": "computer/custom_nodes/comfyui-anima-artist-gallery/previews/a187397.png",
+      "bytes": 1282203,
+      "sha256": "db12728b740dc44be9473311654ed432797f2929cb9052cbb490cbf4f5ec26c8"
+    },
+    {
+      "path": "computer/custom_nodes/comfyui-anima-artist-gallery/previews/a23423.png",
+      "bytes": 1464333,
+      "sha256": "775ebd11b63aac41fc74bf661f3f1807c7ffd371753c9b00875738c6629ae917"
+    },
+    {
+      "path": "computer/custom_nodes/comfyui-anima-artist-gallery/previews/a25424.png",
+      "bytes": 1295848,
+      "sha256": "a7a4479bec63ff55f5f652a9c617884aacab0bea32c8fcefaac461a2abaa9e0b"
+    },
+    {
+      "path": "computer/custom_nodes/comfyui-anima-artist-gallery/previews/a256121.png",
+      "bytes": 1728635,
+      "sha256": "ed463372b1d7b9f8112ec050f03044c1aff5b43ad7efbf74349d95edd66039d5"
+    },
+    {
+      "path": "computer/custom_nodes/comfyui-anima-artist-gallery/previews/a26383.png",
+      "bytes": 1190997,
+      "sha256": "01616877443e97ff18be0fa95b240b9e83c94532a97c7f1afe693ee6ffe02f6f"
+    },
+    {
+      "path": "computer/custom_nodes/comfyui-anima-artist-gallery/previews/a32203.png",
+      "bytes": 1341318,
+      "sha256": "215b5afa9b7b98f3d871fedd2c1dd42003854872d0ae8624b879c7047e51707b"
+    },
+    {
+      "path": "computer/custom_nodes/comfyui-anima-artist-gallery/previews/a34240.png",
+      "bytes": 1365483,
+      "sha256": "b407a0b34b5421afeda2a9b4c830b61ed6700c842068bbbea1ae9ff5e8320f38"
+    },
+    {
+      "path": "computer/custom_nodes/comfyui-anima-artist-gallery/previews/a37305.png",
+      "bytes": 1361278,
+      "sha256": "2c78f0cd36d1c441df152cb90852ff117ea490b727384b1caff01fe172adf4f5"
+    },
+    {
+      "path": "computer/custom_nodes/comfyui-anima-artist-gallery/previews/a46080.png",
+      "bytes": 1357628,
+      "sha256": "f5f82213d9cf8174911001535487122dbd97736ce16857942984b118b06ce4b3"
+    },
+    {
+      "path": "computer/custom_nodes/comfyui-anima-artist-gallery/previews/a4758.png",
+      "bytes": 1139235,
+      "sha256": "c0b2fe7be6c3e56ef4cfaa591374f48c14e51758944240ff35eeb4dbb821d3c7"
+    },
+    {
+      "path": "computer/custom_nodes/comfyui-anima-artist-gallery/previews/a48560.png",
+      "bytes": 1702546,
+      "sha256": "d5ec8ea6cf2cd736e3e48f802075d6a7bc5087dc717b85c665a9ddff453ecad1"
+    },
+    {
+      "path": "computer/custom_nodes/comfyui-anima-artist-gallery/previews/a4999.png",
+      "bytes": 1160817,
+      "sha256": "e8530104b1b7f0283ef3e23cc04ec38e1cb8b349674d8f8809bd552c5ac36662"
+    },
+    {
+      "path": "computer/custom_nodes/comfyui-anima-artist-gallery/previews/a5137.png",
+      "bytes": 1356431,
+      "sha256": "22afba1fa23eac125b5db38996f46d894ce88dc7050a12bad029c1e6fd0bf122"
+    },
+    {
+      "path": "computer/custom_nodes/comfyui-anima-artist-gallery/previews/a51450.png",
+      "bytes": 1188746,
+      "sha256": "231478715466bd44d99d7b034c1af5ffa510ea8519b28f4c3917e3f64396df36"
+    },
+    {
+      "path": "computer/custom_nodes/comfyui-anima-artist-gallery/previews/a5162.png",
+      "bytes": 1268889,
+      "sha256": "f08901398b1928049cbdaff18522d4b510b4e458067ae9a5a7f8cacef0e750c5"
+    },
+    {
+      "path": "computer/custom_nodes/comfyui-anima-artist-gallery/previews/a54054.png",
+      "bytes": 1371125,
+      "sha256": "d1e1c1a51072734854eeada38fb6297fc7d2f21ddb7407a82603c2ed1292d7a7"
+    },
+    {
+      "path": "computer/custom_nodes/comfyui-anima-artist-gallery/previews/a608774.png",
+      "bytes": 1587478,
+      "sha256": "39d2fca34f807f46eccb71f0df584cd11c56b7a9f258b1a4f4d077b4e26e376b"
+    },
+    {
+      "path": "computer/custom_nodes/comfyui-anima-artist-gallery/previews/a6267.png",
+      "bytes": 1456720,
+      "sha256": "5fb1ab7014738a5f8694b0fa3ffa2689975b0f9b3bfcc3b1e1a6e08c83d0f677"
+    },
+    {
+      "path": "computer/custom_nodes/comfyui-anima-artist-gallery/previews/a67359.png",
+      "bytes": 1514193,
+      "sha256": "133ada10ce8abf2e3f85d9466cab361a22b73c97f0bf7cc96d224e56c7320530"
+    },
+    {
+      "path": "computer/custom_nodes/comfyui-anima-artist-gallery/previews/a7416.png",
+      "bytes": 1421994,
+      "sha256": "d20681dd4e2a58e9408816f09dffa1b27768e76f96d65ccfb7a0dc62b49e644f"
+    },
+    {
+      "path": "computer/custom_nodes/comfyui-anima-artist-gallery/previews/a77698.png",
+      "bytes": 1309465,
+      "sha256": "dffa75bd3a1877f79a5d12d3922c8082c07b2a9f3521a080a5c886d6afa17bcd"
+    },
+    {
+      "path": "computer/custom_nodes/comfyui-anima-artist-gallery/previews/a81486.png",
+      "bytes": 1337901,
+      "sha256": "4336e84d5a399a9a62d962a358c0f57602240d330eb27bf63c8680de1908398c"
+    },
+    {
+      "path": "computer/custom_nodes/comfyui-anima-artist-gallery/previews/a82182.png",
+      "bytes": 1312291,
+      "sha256": "7a6a8c76fe2654fa9da3e4bc6f775e3a74dcbcc6a14fdefbe398534150fd6328"
+    },
+    {
+      "path": "computer/custom_nodes/comfyui-anima-artist-gallery/previews/a8683.png",
+      "bytes": 1436325,
+      "sha256": "4b4dd4a855521e2368148490daf0fe5eb93a7f1db6ad1ddc6e8f81e4c3780aa0"
+    },
+    {
+      "path": "computer/custom_nodes/comfyui-anima-artist-gallery/previews/a8704.png",
+      "bytes": 1515770,
+      "sha256": "71dc390f65b6117aeeb0fcefd9ee3a472c346aace3126cb0b27a58fed33e65e8"
+    },
+    {
+      "path": "computer/custom_nodes/comfyui-anima-artist-gallery/previews/a87521.png",
+      "bytes": 1317319,
+      "sha256": "9ec12e3c425f3cd5bbd56a2277d91bfa39b74de391a97f23d5dca05e6381db30"
+    },
+    {
+      "path": "computer/custom_nodes/comfyui-anima-artist-gallery/previews/a87540.png",
+      "bytes": 1294905,
+      "sha256": "09efdf0c1c995fc2ea16e1d802d2afb8262b42e58aec5be3bf19df3bd128b654"
+    },
+    {
+      "path": "computer/custom_nodes/comfyui-anima-artist-gallery/previews/a92379.png",
+      "bytes": 1685830,
+      "sha256": "5e438a3b8cc0a31ec9b96e7d8ffdec8bdeec11e709c0d0191d64929d31fd90f9"
+    },
+    {
+      "path": "computer/custom_nodes/comfyui-anima-artist-gallery/previews/a9415.png",
+      "bytes": 1107477,
+      "sha256": "1b64ece1e5f00105df66cfa77ffedb0d11fe44c39ad6a4e38681f523c74ecbce"
+    },
+    {
+      "path": "computer/custom_nodes/comfyui-anima-artist-gallery/previews/style_amano.png",
+      "bytes": 1702508,
+      "sha256": "4b7242cfeeb4488495c4cc047cb2cbd2bf7f055b81ff62ace26923ba72e8575f"
+    },
+    {
+      "path": "computer/custom_nodes/comfyui-anima-artist-gallery/previews/style_ghibli.png",
+      "bytes": 1758954,
+      "sha256": "fe5e7ab9897ef853091bc1f195a9c992423aeb8f7da2bcc3120167b52fcaec35"
+    },
+    {
+      "path": "computer/custom_nodes/comfyui-anima-artist-gallery/previews/style_key.png",
+      "bytes": 1416330,
+      "sha256": "a058283d8063528a1531201242e85f0249d26c2a65768e9eb67ce980a35bcce6"
+    },
+    {
+      "path": "computer/custom_nodes/comfyui-anima-artist-gallery/previews/style_naoko.png",
+      "bytes": 1697371,
+      "sha256": "b16428c7694733a5a68030c374b5b6e87c4e160c252eb2b20497655050d6c771"
+    },
+    {
+      "path": "computer/custom_nodes/comfyui-anima-artist-gallery/previews/style_psg.png",
+      "bytes": 1204923,
+      "sha256": "e08f42e2ea1f0983760220a42169bf4e3a9be494f44c28da222f203fe9c11905"
+    },
+    {
+      "path": "computer/custom_nodes/comfyui-anima-artist-gallery/previews/style_rumiko.png",
+      "bytes": 1525231,
+      "sha256": "3f50b8aa506f6240763ed64d1d386f2d04544e83aed3789f9055da251a69b207"
+    },
+    {
+      "path": "computer/custom_nodes/comfyui-anima-artist-gallery/previews/style_shinkai.png",
+      "bytes": 1474156,
+      "sha256": "865e3cdb62c07d5ac42be202bae049547482fde256ee91be095a6d83c67b2e9d"
+    },
+    {
+      "path": "computer/custom_nodes/comfyui-anima-artist-gallery/previews/style_shirow.png",
+      "bytes": 1905746,
+      "sha256": "341e8d8f6286d18eff0ca3cb7e7c248fa88ef05ac57accfcba86a05790d09f8a"
+    },
+    {
+      "path": "computer/custom_nodes/comfyui-anima-artist-gallery/previews/style_taimanin_k.png",
+      "bytes": 1312194,
+      "sha256": "495f4c369ce87d0f4aa2978624d32a4eb6243e276f2858b81c5240b5e5e02d48"
+    },
+    {
+      "path": "computer/custom_nodes/comfyui-anima-artist-gallery/previews/style_takeuchi.png",
+      "bytes": 1264184,
+      "sha256": "d6032a45d8ca7b4d6630cc48587b77da04d3cdaf7dd35b0686a46fe815b73a4a"
+    },
+    {
+      "path": "computer/custom_nodes/comfyui-anima-artist-gallery/previews/style_toriyama.png",
+      "bytes": 1766168,
+      "sha256": "8508250b5a5e7c07a1137b2df19e03ac15ccf3ce76046a6d18318346ec84d2f2"
+    },
+    {
+      "path": "computer/custom_nodes/comfyui-anima-artist-gallery/README.md",
+      "bytes": 401,
+      "sha256": "751aef1c7c3684cf9b423356a5576c5bbf2100a2afb545a966d6b8218205bab5"
+    },
+    {
+      "path": "computer/custom_nodes/comfyui-anima-artist-gallery/SOURCE_NOTES.md",
+      "bytes": 2845,
+      "sha256": "2bb2bb1f394e9bb82affaa636a3a90472175d4dcba76a2e79046515bd950ff98"
+    },
+    {
+      "path": "computer/custom_nodes/comfyui-anima-artist-gallery/web/artist_gallery.js",
+      "bytes": 9619,
+      "sha256": "164e705075fc8f8d9bc2fddfd438ed03b3d8068c98d785e0d1b3f55bcfaf732f"
+    },
+    {
+      "path": "computer/custom_nodes/comfyui-anima-artist-gallery/经典风格说明.md",
+      "bytes": 3573,
+      "sha256": "d422459ee51c8bceb7ae57f8e195154e2760b8bbb65292843b38b299da6e3f59"
+    },
+    {
+      "path": "computer/custom_nodes/comfyui-excel-prompt-glossary/__init__.py",
+      "bytes": 13936,
+      "sha256": "251dc0c7c19e969ec2e6658deaba6e4c5af5fd97ba9ff8cec6b233bf103f11a4"
+    },
+    {
+      "path": "computer/custom_nodes/comfyui-excel-prompt-glossary/Anima_translation_rules.txt",
+      "bytes": 4439,
+      "sha256": "0eb9ff2a37108902ff27889782ade7dc4a9ad1718dd20261823158515f9a9399"
+    },
+    {
+      "path": "computer/custom_nodes/comfyui-excel-prompt-glossary/requirements.txt",
+      "bytes": 18,
+      "sha256": "886ea41f2c62469338cff8ffe090e2110346d90ef75f906bfb3b39da012ff32c"
+    },
+    {
+      "path": "computer/custom_nodes/comfyui-sg-llama-cpp/.gitignore",
+      "bytes": 34,
+      "sha256": "9bfd9d91d662ac84de6c798ee73444bba93f54c8173ab4bd0cf7c54301891b61"
+    },
+    {
+      "path": "computer/custom_nodes/comfyui-sg-llama-cpp/__init__.py",
+      "bytes": 536,
+      "sha256": "dd2940c794d2925d0f15199fdd00f87567d1489de2f923f88129cb85e6d1e689"
+    },
+    {
+      "path": "computer/custom_nodes/comfyui-sg-llama-cpp/config.example.json",
+      "bytes": 51,
+      "sha256": "7bbbb8a1e38de63d4477e7d9dc536bf110ae2fa89b219463711611499837c242"
+    },
+    {
+      "path": "computer/custom_nodes/comfyui-sg-llama-cpp/LICENSE",
+      "bytes": 34533,
+      "sha256": "fd148d4f53dfd15197cff0f8c74e7fa59830719faeb71bfed2523b9d75725bc1"
+    },
+    {
+      "path": "computer/custom_nodes/comfyui-sg-llama-cpp/nodes.py",
+      "bytes": 23303,
+      "sha256": "2627274a6380c154ff07eceb8ffe1c5d349417a45c4f8f84afd60509a5270a69"
+    },
+    {
+      "path": "computer/custom_nodes/comfyui-sg-llama-cpp/pyproject.toml",
+      "bytes": 603,
+      "sha256": "949b9803a0ca2d08a84337c8e38d1c7382242d2484aafe2f878d745ec200c2e0"
+    },
+    {
+      "path": "computer/custom_nodes/comfyui-sg-llama-cpp/README.md",
+      "bytes": 5564,
+      "sha256": "31eed8a3abc480c5e33178b56533745771042ea924a1799602969843c07375ce"
+    },
+    {
+      "path": "computer/custom_nodes/comfyui-sg-llama-cpp/requirements.txt",
+      "bytes": 16,
+      "sha256": "13929b6dae1fdc0d28a2c9d7630c7304915fa5662e6a5cad55060be1439ab08e"
+    },
+    {
+      "path": "computer/custom_nodes/comfyui-sg-llama-cpp/utils.py",
+      "bytes": 785,
+      "sha256": "03324341aa94f32b3b849c12471335fb0534e53ca02da95aac27530656e3863b"
+    },
+    {
+      "path": "COPYRIGHT.md",
+      "bytes": 287,
+      "sha256": "206b03db7af2f00e8c5ca1493168c6d78554a767b45d9d158236dd0af0f1e0c6"
+    },
+    {
+      "path": "data/glossaries/Anima角色作品词典.xlsx",
+      "bytes": 214265,
+      "sha256": "e2e61d61b35970084f5a29a5fe6b57581d3d38a221c7d7396f9913a1b3d1c5c7"
+    },
+    {
+      "path": "docs/ARCHITECTURE.md",
+      "bytes": 1405,
+      "sha256": "49aa64ba47a62e9b14bcc0b636c8a3f3cbd5382171f3122ce5f7e6922a5f267f"
+    },
+    {
+      "path": "docs/ARTISTS.md",
+      "bytes": 1410,
+      "sha256": "976c73b857ec82829b8ce360193145e4e197f13b05ada526f80f5db722dcce93"
+    },
+    {
+      "path": "docs/BUILD.md",
+      "bytes": 1499,
+      "sha256": "4fc9ccebd827a8b31308728cd2b00643f18c651a1feccd550d75f24b49970546"
+    },
+    {
+      "path": "docs/SETUP.md",
+      "bytes": 3076,
+      "sha256": "d85e338cbf4bf303f00f05a8acc98edb7a28f31e8adb01cae171cb80e9850e72"
+    },
+    {
+      "path": "docs/TRANSLATION.md",
+      "bytes": 2341,
+      "sha256": "ee175f6857111ce5cbbdbac3db8602f5177342f9c92021c7b64cdb9bdd38fdf7"
+    },
+    {
+      "path": "docs/WORKFLOWS.md",
+      "bytes": 2238,
+      "sha256": "f838e6951c1f071c7a44ac26b4836f0787f30454fe76f7edc92f64ed421beb48"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 34533,
+      "sha256": "fd148d4f53dfd15197cff0f8c74e7fa59830719faeb71bfed2523b9d75725bc1"
+    },
+    {
+      "path": "LICENSES/Apache-2.0.txt",
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "path": "LICENSES/JSON-java-20240303.txt",
+      "bytes": 16,
+      "sha256": "86cc84f1773e3318ba26fd61b3ae508a167df38b361695e105f6e499e7a2736f"
+    },
+    {
+      "path": "LICENSES/OkHttp-3.14.9.txt",
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "path": "LICENSES/Okio-1.17.2.txt",
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "path": "README.md",
+      "bytes": 2925,
+      "sha256": "8e8a8aba1413601f88c6fdd615cea8d0ffee27b2ca12d7667671a967e8b1fd37"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "bytes": 1105,
+      "sha256": "bba7812feebc18f1291bbd5cd34ed60b60e97a61c8bd848cf4add2b27359676b"
+    },
+    {
+      "path": "workflows/手机Anima文生图.json",
+      "bytes": 49330,
+      "sha256": "7ceb2f12b6481a3435eb8ab1c28a983f90c295e2593cbf74f68dbd7cad7f7020"
+    },
+    {
+      "path": "workflows/手机图改图 (单图）.json",
+      "bytes": 99088,
+      "sha256": "bc41f3bec7baf4f130a875f970502f8fb668dcb5e2884fd0b340c3f272c2e88c"
+    },
+    {
+      "path": "workflows/手机图改图 (双图）.json",
+      "bytes": 99079,
+      "sha256": "1b04210b38d654aacd0ba600fc75d1dc2a246d614feee20583cf1c794f76efac"
+    },
+    {
+      "path": "workflows/手机文生图.json",
+      "bytes": 55210,
+      "sha256": "953dde8a23838815ea52b57c586148fdaeedb22aecedf9f2ac6e5f733a0a3716"
+    }
+  ]
+}
